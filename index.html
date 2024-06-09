@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>philip meng</title>
+    <title>Philip Meng</title>
     <style>
         body {
             font-family: 'Times New Roman', serif; /* Classic Times New Roman font */
@@ -23,26 +23,25 @@
         .photo-row {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px; /* Increased spacing below the photo row */
+            margin-bottom: 20px; /* Increased spacing below the photo row */
+        }
+        .photo-frame {
+            width: 150px; /* Fixed width for all frames */
+            height: 150px; /* Fixed height for all frames */
+            border-radius: 50%; /* Circular frames */
+            overflow: hidden; /* Hides anything outside the border */
+            position: relative;
+            margin: 0 15px; /* Spacing between frames */
         }
         .photo-row img {
-            width: 150px; /* Fixed width for all images */
-            height: 150px; /* Fixed height for all images */
-            border-radius: 50%; /* Circular images */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            margin: 0 15px; /* Spacing between photos */
-            overflow: hidden; /* Ensures no part of the image spills outside the boundary */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .photo-row img:first-child {
-            object-position: center; /* Centers the first image */
-            transform: scale(1.2); /* Zooms in the first image by 20% */
-            position: relative; /* Needed for correct overflow handling */
-            z-index: 1; /* Ensure it does not affect layout of other elements */
-            margin-right: -30px; /* Compensate for the scale to align images better */
-            margin-left: -30px;
-        }
-        .photo-row img:nth-child(2) {
-            object-position: calc(50% - 20px) center; /* Centers the second image slightly to the left */
+        .zoom {
+            transform: scale(1.2); /* Zooms in the image by 20% */
+            object-position: center; /* Ensures the zoom centers correctly */
         }
         h1 {
             margin: 0;
@@ -89,8 +88,12 @@
 <body>
     <div class="container">
         <div class="photo-row">
-            <img src="IMG_2650.JPEG" alt="talking lol">
-            <img src="IMG_3169.JPG" alt="the bucks">
+            <div class="photo-frame">
+                <img src="IMG_2650.JPEG" alt="talking lol" class="zoom">
+            </div>
+            <div class="photo-frame">
+                <img src="IMG_3169.JPG" alt="the bucks">
+            </div>
         </div>
         <h1>philip meng</h1>
         <p class="description">
