@@ -6,65 +6,71 @@
     <title>philip meng</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif; /* Classic Times New Roman font */
-            color: #333; /* Dark gray text for readability */
+            font-family: 'Times New Roman', serif;
+            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #FFFFFF; /* White background */
+            background: #FFFFFF;
         }
         .container {
             text-align: center;
-            padding: 20px; /* Added padding around the container */
+            padding: 20px;
         }
         .photo-row {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px; /* Spacing below the photo row */
+            margin-bottom: 20px;
         }
         .photo-row img {
-            width: 150px; /* Fixed width for all images */
-            height: 150px; /* Fixed height for all images */
-            border-radius: 50%; /* Circular images */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            object-position: center; /* Centers the image within the element */
-            margin: 0 10px; /* Spacing between photos */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+        .photo-row img:first-child {
+            object-position: center; /* Centers the image */
+            transform: scale(1.2); /* Zooms in the image by 20% */
+        }
+        .photo-row img:nth-child(2) {
+            object-position: right center; /* Centers the image more to the right */
         }
         h1 {
             margin: 0;
             font-size: 24px;
-            color: #000; /* Fully black text for name */
-            margin-bottom: 15px; /* Increased spacing below the name */
-            text-transform: lowercase; /* Converts text to lowercase */
+            color: #000;
+            margin-bottom: 15px;
+            text-transform: lowercase;
         }
         p.description {
-            margin-top: 10px; /* Margin top for spacing */
-            margin-bottom: 15px; /* Increased spacing above the navigation links */
-            color: #000; /* Fully black color for description */
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: #000;
             font-size: 18px;
-            padding: 0 10%; /* Adds horizontal padding for better text alignment */
-            box-sizing: border-box; /* Ensures padding is included in width calculation */
-            font-style: italic; /* Italicize the description text */
+            padding: 0 10%; 
+            box-sizing: border-box;
+            font-style: italic;
         }
         a.special-link {
-            text-decoration: underline; /* Underline special links */
-            font-style: italic; /* Italicize special links */
-            color: #000; /* Black color for special links */
+            text-decoration: underline;
+            font-style: italic;
+            color: #000;
         }
         nav {
             margin-top: 10px;
         }
         nav a {
-            text-decoration: underline; /* Ensure links are underlined */
-            color: #000; /* Black color for links */
+            text-decoration: underline;
+            color: #000;
             margin: 0 10px;
-            font-size: 16px; /* Smaller font size for links */
+            font-size: 16px;
         }
         nav a:hover {
-            text-decoration: none; /* Remove underline on hover */
+            text-decoration: none;
         }
         footer {
             position: absolute;
@@ -88,8 +94,10 @@
         <nav>
             <a href="https://www.linkedin.com/in/philip-meng-1402b0258/">linkedin</a>
             <a href="https://twitter.com/pmeng177">twitter</a>
+            <a href="https://www.instagram.com/philmeng17/">instagram</a>
             <a href="mailto:philipmeng8@gmail.com">email</a>
         </nav>
     </div>
 </body>
 </html>
+
