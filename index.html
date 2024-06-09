@@ -30,11 +30,16 @@
             height: 150px; /* Fixed height for all images */
             border-radius: 50%; /* Circular images */
             object-fit: cover; /* Ensures the image covers the area without distortion */
-            margin: 0 15px; /* Increased spacing between photos */
+            margin: 0 15px; /* Spacing between photos */
+            overflow: hidden; /* Ensures no part of the image spills outside the boundary */
         }
         .photo-row img:first-child {
             object-position: center; /* Centers the first image */
             transform: scale(1.2); /* Zooms in the first image by 20% */
+            position: relative; /* Needed for correct overflow handling */
+            z-index: 1; /* Ensure it does not affect layout of other elements */
+            margin-right: -30px; /* Compensate for the scale to align images better */
+            margin-left: -30px;
         }
         .photo-row img:nth-child(2) {
             object-position: calc(50% - 20px) center; /* Centers the second image slightly to the left */
